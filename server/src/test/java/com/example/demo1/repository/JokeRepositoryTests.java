@@ -26,14 +26,14 @@ public class JokeRepositoryTests {
         joke1 = new Joke();
         joke1.setContent("nihao");
         joke1.setTitle("title");
-        joke1.setCreateAt(new Date());
-        joke1.setUpdatedAt(new Date());
+       /* joke1.setCreateAt(new Date());
+        joke1.setUpdatedAt(new Date());*/
         jokeRepository.save(joke1);
         joke2 = new Joke();
         joke2.setContent("nihao2");
         joke2.setTitle("title2");
-        joke2.setCreateAt(new Date());
-        joke2.setUpdatedAt(new Date());
+        /*joke2.setCreateAt(new Date());
+        joke2.setUpdatedAt(new Date());*/
         jokeRepository.save(joke2);
 
 

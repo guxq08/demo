@@ -48,14 +48,14 @@ public class JokeControllerTests {
         Joke joke = new Joke();
         joke.setTitle("joketitle");
         joke.setContent("jokecontent");
-        joke.setUpdatedAt(new Date());
-        joke.setCreateAt(new Date());
+        /*joke.setUpdatedAt(new Date());
+        joke.setCreateAt(new Date());*/
         JSONObject object = new JSONObject();
         object.put("id","88888");
         object.put("title",joke.getTitle());
         object.put("content",joke.getContent());
-        object.put("createAt",joke.getCreateAt());
-        object.put("updatedAt",joke.getUpdatedAt());
+        /*object.put("createAt",joke.getCreateAt());
+        object.put("updatedAt",joke.getUpdatedAt());*/
        MvcResult mvcResult =  mockMvc.perform(post("/api/jokes").
                 content(object.toJSONString()).
                contentType(MediaType.APPLICATION_JSON)).

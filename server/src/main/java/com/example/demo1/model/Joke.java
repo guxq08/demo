@@ -11,7 +11,6 @@ import java.util.Date;
 
 @Entity
 @Table(name="joke")
-//@JsonIgnoreProperties(value = {"createdAt","updatedAt"}, allowGetters = true)
 
 public class Joke implements Serializable {
     @Id
@@ -22,15 +21,15 @@ public class Joke implements Serializable {
     @NotBlank
     private String content;
 
-    @Column(name="created_on",nullable = false,updatable = false)
+  /*  @Column(name="created_on")
     @Temporal(TemporalType.TIMESTAMP)
     @CreatedDate
     private Date createAt;
 
-    @Column(nullable = false)
+
     @Temporal(TemporalType.TIMESTAMP)
     @LastModifiedDate
-    private Date updatedAt;
+    private Date updatedAt;*/
     public Joke(String content){
         this.content = content;
 
@@ -63,7 +62,7 @@ public class Joke implements Serializable {
         this.content = content;
     }
 
-    public Date getCreateAt() {
+   /* public Date getCreateAt() {
         return createAt;
     }
 
@@ -77,5 +76,5 @@ public class Joke implements Serializable {
 
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
-    }
+    }*/
 }

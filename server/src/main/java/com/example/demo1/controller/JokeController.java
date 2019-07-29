@@ -65,8 +65,9 @@ public class JokeController {
      * @param joke
      */
     @PutMapping("/api/jokes/{id}")
-    public Joke upateJokeById(@PathVariable(value="id")int id,@RequestBody Joke joke){
-       return jokeService.upateJokeById(id,joke);
+    public List<Joke>  upateJokeById(@PathVariable(value="id")int id,@RequestBody Joke joke){
+        jokeService.upateJokeById(id,joke);
+        return jokeService.findAll();
 
     }
 
